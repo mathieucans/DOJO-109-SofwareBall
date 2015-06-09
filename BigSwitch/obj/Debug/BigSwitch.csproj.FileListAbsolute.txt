@@ -1,0 +1,6 @@
+c:\users\gaidoncha\documents\visual studio 2012\Projects\BigSwitch\BigSwitch\bin\Debug\BigSwitch.exe.config
+c:\users\gaidoncha\documents\visual studio 2012\Projects\BigSwitch\BigSwitch\bin\Debug\BigSwitch.exe
+c:\users\gaidoncha\documents\visual studio 2012\Projects\BigSwitch\BigSwitch\bin\Debug\BigSwitch.pdb
+c:\users\gaidoncha\documents\visual studio 2012\Projects\BigSwitch\BigSwitch\obj\Debug\BigSwitch.csprojResolveAssemblyReference.cache
+c:\users\gaidoncha\documents\visual studio 2012\Projects\BigSwitch\BigSwitch\obj\Debug\BigSwitch.exe
+c:\users\gaidoncha\documents\visual studio 2012\Projects\BigSwitch\BigSwitch\obj\Debug\BigSwitch.pdb
