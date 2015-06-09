@@ -11,10 +11,10 @@ namespace BigSwitch
         {
         }
 
-        internal void Wakeup(RobotB b)
+        internal void Wakeup(RobotSendToA target)
         {
-            Console.WriteLine("A => " + b.Name);
-            b.TakeBall();
+            Console.WriteLine("A => " + target.Name);
+            target.TakeBall();
         }
     }
 }

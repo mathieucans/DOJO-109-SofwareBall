@@ -5,22 +5,21 @@ using System.Text;
 
 namespace BigSwitch
 {
-    class Wakeup
+    class RobotWakeup
     {
         private RobotA a;
         private EventAggregator eventT;
         private string condition;
-        private RobotB target;
+        private RobotSendToA target;
 
       
-        public Wakeup(RobotA a, EventAggregator eventT, string condition, RobotB b)
+        public RobotWakeup(RobotA a, EventAggregator eventT, string condition, RobotSendToA target)
         {
-            // TODO: Complete member initialization
             this.a = a;
             this.eventT = eventT;
             this.eventT.Published +=OnPublished;
             this.condition = condition;
-            this.target = b;
+            this.target = target;
         }
 
         private void OnPublished(object sender, string e)

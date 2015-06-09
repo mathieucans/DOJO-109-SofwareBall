@@ -45,8 +45,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RobotA.cs" />
-    <Compile Include="RobotB.cs" />
-    <Compile Include="Wakeup.cs" />
+    <Compile Include="RobotSendToA.cs" />
+    <Compile Include="RobotWakeup.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -13,15 +13,13 @@ namespace BigSwitch
         {
             var eventT = new EventAggregator();
             var a = new RobotA();
-            var b = new RobotB("B");
-            var c = new RobotB("C");
+            var b = new RobotSendToA("B", a);
+            var c = new RobotSendToA("C", a);
 
-            var wakeupforB = new Wakeup(a, eventT, "1", b);
+            var wakeupforB = new RobotWakeup(a, eventT, "1", b);
 
-            var wakeupforC = new Wakeup(a, eventT, "2", c);
+            var wakeupforC = new RobotWakeup(a, eventT, "2", c);
 
-            b.A =a;
-            c.A =a;
             while (true)
             {
                 var entry = Console.ReadLine();

@@ -5,20 +5,22 @@ using System.Text;
 
 namespace BigSwitch
 {
-    class RobotB
+    class RobotSendToA
     {
+        private RobotA a;
+
         public string Name { get; private set; }
 
-        public RobotB(string name)
-        {            
-            this.Name = name;
-        }
-        public RobotA A { get; set; }
+        public RobotSendToA(string p, RobotA a)
+        {
+            Name = p;
+            this.a = a;
+        }       
 
         internal void TakeBall()
         {
             Console.WriteLine(Name + " => A");
-            A.TakeBall();
+            a.TakeBall();
         }
     }
 }
