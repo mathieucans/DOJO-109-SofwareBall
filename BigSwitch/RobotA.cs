@@ -13,7 +13,7 @@ namespace BigSwitch
 
         internal void Wakeup(RobotB b)
         {
-            Console.WriteLine("A => B");
+            Console.WriteLine("A => " + b.Name);
             b.TakeBall();
         }
     }

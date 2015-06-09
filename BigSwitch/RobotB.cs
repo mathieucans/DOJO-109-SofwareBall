@@ -7,11 +7,17 @@ namespace BigSwitch
 {
     class RobotB
     {
+        public string Name { get; private set; }
+
+        public RobotB(string name)
+        {            
+            this.Name = name;
+        }
         public RobotA A { get; set; }
 
         internal void TakeBall()
         {
-            Console.WriteLine("B => A");
+            Console.WriteLine(Name + " => A");
             A.TakeBall();
         }
     }

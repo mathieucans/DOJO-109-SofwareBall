@@ -9,23 +9,28 @@ namespace BigSwitch
     {
         private RobotA a;
         private EventAggregator eventT;
+        private string condition;
+        private RobotB target;
 
-
-        public Wakeup(RobotA a, EventAggregator eventT)
+      
+        public Wakeup(RobotA a, EventAggregator eventT, string condition, RobotB b)
         {
+            // TODO: Complete member initialization
             this.a = a;
             this.eventT = eventT;
-            eventT.Published += OnPublished;
+            this.eventT.Published +=OnPublished;
+            this.condition = condition;
+            this.target = b;
         }
 
         private void OnPublished(object sender, string e)
         {
-            if (e == "1")
+            if (e == condition)
             {
-                a.Wakeup(B);
+                a.Wakeup(target);
             }
         }
 
-        public RobotB B { get; set; }
+        
     }
 }
