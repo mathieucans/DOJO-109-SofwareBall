@@ -7,26 +7,14 @@ namespace BigSwitch
 {
     class RobotA
     {
-        private EventAggregator eventT;
-        public RobotB B;
-
-        public RobotA(EventAggregator eventT)
-        {           
-            this.eventT = eventT;
-            eventT.Published += OnPublished;
-        }
-
-        private void OnPublished(object sender, string e)
-        {
-            if (e == "1")
-            {
-                Console.WriteLine("A => B");
-                B.TakeBall();
-            }
-        }
-
         internal void TakeBall()
         {
+        }
+
+        internal void Wakeup(RobotB b)
+        {
+            Console.WriteLine("A => B");
+            b.TakeBall();
         }
     }
 }

@@ -12,22 +12,16 @@ namespace BigSwitch
         static void Main(string[] args)
         {
             var eventT = new EventAggregator();
-            var a = new RobotA(eventT);
+            var a = new RobotA();
             var b = new RobotB();
-            a.B = b;
+
+            var wakeup = new Wakeup(a, eventT);
+            wakeup.B = b;
             b.A =a;
             while (true)
             {
                 var entry = Console.ReadLine();
-                if (entry == "1")
-                {
-                    eventT.Publish(entry);
-                    //Console.WriteLine("A => B");
-                    //Console.WriteLine("B => A");
-                    
-
-                }
-
+                 eventT.Publish(entry);                 
             }
         }
     }
